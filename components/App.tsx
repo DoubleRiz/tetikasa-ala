@@ -31,13 +31,12 @@ const App: React.FC = () => {
 
         {/* MISSIONS SECTION */}
         <section id="missions" className="py-48 px-6 relative bg-white text-[var(--ink)] overflow-hidden">
-          {/* Improved Forest background */}
           <Dividers.Forest className="text-[var(--forest-pastel)]" />
           
           <div className="max-w-[1400px] mx-auto relative z-10">
             <div className="text-center mb-40 relative">
               <span className="font-stamped text-lg uppercase tracking-[0.4em] text-[var(--forest)] font-black">Nos engagements</span>
-              <h2 className="text-8xl md:text-[12rem] font-black uppercase mt-6 ink-bleed leading-none tracking-widest">Missions <br/> Fondatrices</h2>
+              <h2 className="text-8xl md:text-[10rem] font-black uppercase mt-6 ink-bleed leading-none tracking-widest">Missions <br/> Fondatrices</h2>
               <Dividers.Dots className="text-[var(--forest)] mt-8" />
             </div>
             
@@ -54,8 +53,7 @@ const App: React.FC = () => {
                     <div className="w-16 h-16">{pillar.icon}</div>
                   </div>
                   
-                  {/* Reduced letter spacing to prevent overflow */}
-                  <h3 className="text-5xl md:text-6xl font-black uppercase mb-8 tracking-wider whitespace-nowrap">{pillar.title}</h3>
+                  <h3 className="text-5xl font-black uppercase mb-8 tracking-wider whitespace-nowrap">{pillar.title}</h3>
                   <p className="font-stamped text-lg leading-relaxed opacity-80 italic max-w-[280px]">
                     {pillar.description}
                   </p>
@@ -73,7 +71,9 @@ const App: React.FC = () => {
 
         {/* ACTUALITÉS */}
         <section id="actualités" className="py-56 px-6 bg-white relative overflow-hidden">
-          <div className="max-w-[1400px] mx-auto">
+          <Dividers.Fields className="text-[var(--bordeaux)] opacity-[0.05]" />
+          
+          <div className="max-w-[1400px] mx-auto relative z-10">
             <div className="flex flex-col md:flex-row justify-between items-end mb-40 gap-16">
               <div className="relative">
                 <span className="font-stamped text-sm uppercase tracking-widest text-[var(--bordeaux)] font-black mb-4 block">Nos actualités</span>

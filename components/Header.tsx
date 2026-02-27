@@ -23,12 +23,14 @@ const Header: React.FC = () => {
   return (
     <header className="absolute top-0 left-0 w-full z-50 p-8 md:p-12">
       <div className="max-w-[1400px] mx-auto flex justify-between items-center">
-        <div className="flex items-center gap-4 group cursor-pointer h-16 md:h-28">
-          <Icons.AlaLogo className="h-full w-auto transition-transform group-hover:scale-105" />
+        <div className="flex items-center gap-4 group cursor-pointer h-12 md:h-16 text-[var(--forest)]">
+          <div className="h-full aspect-[3/1] transition-transform group-hover:scale-105">
+             <Icons.Logo />
+          </div>
         </div>
 
         <nav className="hidden lg:flex gap-16 text-base font-black uppercase tracking-[0.2em] items-center">
-          {['Missions', 'Actions', 'Actualités'].map((item) => (
+          {['Missions', 'Projets', 'Actualités'].map((item) => (
             <a key={item} href={`#${item.toLowerCase()}`} className="group relative hover:text-[var(--forest)] transition-colors">
               {item}
               <span className="absolute -bottom-2 left-0 w-0 h-1 bg-[var(--bordeaux)] group-hover:w-full transition-all duration-500"></span>
@@ -42,11 +44,11 @@ const Header: React.FC = () => {
                 <button 
                   key={l} 
                   onClick={() => setLang(l)}
-                  title={l}
+                  title={l === Language.EN ? 'United Kingdom' : l}
                   className={`relative w-10 h-10 transition-all duration-300 transform hover:scale-110 ${getRotation(idx)} flex items-center justify-center
                     ${isActive ? 'opacity-100 scale-110 drop-shadow-[4px_4px_0px_var(--ink)]' : 'opacity-40 hover:opacity-80'}`}
                 >
-                  <div className={`w-full h-full bg-white border-2 border-[var(--ink)] p-1 ${isActive ? 'bg-[var(--gray-subtle)] border-4' : ''}`}>
+                  <div className={`w-full h-full bg-white border-2 border-[var(--ink)] p-0.5 ${isActive ? 'bg-[var(--gray-subtle)] border-2' : ''}`}>
                     {getFlagIcon(l)}
                   </div>
                   {isActive && (

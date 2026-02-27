@@ -70,8 +70,9 @@ const ArticleDetail: React.FC<ArticleDetailProps> = ({ id }) => {
 
         {/* Content Body */}
         <div className="bg-white border-8 border-[var(--ink)] p-12 md:p-20 shadow-[20px_20px_0px_rgba(0,0,0,0.1)] relative">
+          {/* Fix: Replace non-existent Icons.Zebu with Icons.Logo for decoration */}
           <div className="absolute -top-10 -right-10 w-32 h-32 opacity-5 pointer-events-none rotate-12">
-            <Icons.Zebu />
+            <Icons.Logo />
           </div>
           
           <p className="font-stamped text-2xl md:text-3xl leading-relaxed italic font-bold text-[var(--ink)]/90 whitespace-pre-line first-letter:text-7xl first-letter:font-black first-letter:mr-3 first-letter:float-left first-letter:font-display">

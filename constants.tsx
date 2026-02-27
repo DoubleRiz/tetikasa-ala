@@ -4,83 +4,104 @@ import { Pillar, NewsItem } from './types';
 
 export const Icons = {
   Logo: () => (
-    <svg viewBox="0 0 450 350" className="w-full h-full" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
-      <path d="M165.7 337.5H97.5L144.1 199.1L48.1 337.5H0L135.5 139.6L184.8 69.1L209.6 33.6H271.8L165.7 337.5Z" />
-      <path d="M213.5 337.5V33.6H275.6V337.5H213.5Z" />
-      <path d="M375.4 337.5C334.4 337.5 301.1 304.2 301.1 263.2C301.1 222.2 334.4 188.9 375.4 188.9C416.4 188.9 449.7 222.2 449.7 263.2C449.7 304.2 416.4 337.5 375.4 337.5ZM375.4 233.1C358.8 233.1 345.3 246.6 345.3 263.2C345.3 279.8 358.8 293.3 375.4 293.3C392 293.3 405.5 279.8 405.5 263.2C405.5 246.6 392 233.1 375.4 233.1Z" />
+    <svg viewBox="0 0 450 150" className="w-full h-full" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M60 20 L20 120 L50 120 L60 90 L100 90 L110 120 L140 120 L100 20 Z M80 35 L95 80 L65 80 Z" />
+      <path d="M150 20 L150 120 L210 120 L210 95 L180 95 L180 20 Z" />
+      <path d="M280 20 L240 120 L270 120 L280 90 L320 90 L330 120 L360 120 L320 20 Z M300 35 L315 80 L285 80 Z" />
+      <path d="M380 20 C360 40 360 80 380 120 C420 120 420 40 380 20 Z M380 40 C395 50 395 90 380 100 C375 90 375 50 380 40 Z" fill="var(--solar)" />
     </svg>
   ),
-  AlaLogo: ({ className = "" }: { className?: string }) => (
-    <svg viewBox="0 0 540 240" className={className} fill="#0B2B16" xmlns="http://www.w3.org/2000/svg">
-      <g>
-        {/* Le 'A' - Large, élégant, géométrie pure */}
-        <path d="M138 35L24 225H88L108 188H208L228 225H292L178 35H138ZM158 92L192 152H124L158 92Z" />
-        
-        {/* Le 'l' - Tronc robuste et vertical */}
-        <path d="M275 35H327V225H275V35Z" />
-        
-        {/* Feuilles asymétriques - Dessinées avec précision */}
-        {/* Feuille de gauche - Sprout supérieur */}
-        <path d="M275 88C225 55 210 115 275 125L275 88Z" />
-        {/* Feuille de droite - Sprout inférieur */}
-        <path d="M327 108C385 85 405 155 327 165L327 108Z" />
-        
-        {/* Le 'a' - Bol circulaire parfait et jambage vertical */}
-        <path d="M435 118C402 118 375 145 375 178C375 211 402 238 435 238C458 238 475 228 482 212V235H534V118H482V138C475 122 458 118 435 118ZM455 198C444 198 432 189 432 178C432 167 444 158 455 158C466 158 478 167 478 178C478 189 466 198 455 198Z" />
-      </g>
+  Vanilla: () => (
+    <svg viewBox="0 0 100 100" fill="currentColor">
+      <path d="M50 80 Q60 50 50 20 Q40 50 50 80 Z" />
+      <path d="M45 40 Q50 35 55 40" fill="none" stroke="currentColor" strokeWidth="2" />
+    </svg>
+  ),
+  Coffee: () => (
+    <svg viewBox="0 0 100 100" fill="currentColor">
+      <path d="M30 50 A20 25 0 1 0 70 50 A20 25 0 1 0 30 50 Z" />
+      <path d="M50 25 L50 75" stroke="currentColor" strokeWidth="2" opacity="0.3" />
+    </svg>
+  ),
+  Manioc: () => (
+    <svg viewBox="0 0 100 100" fill="currentColor">
+      <path d="M50 90 L50 10 M50 10 L80 40 M50 10 L20 40 M50 50 L90 60 M50 50 L10 60" fill="none" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
+    </svg>
+  ),
+  Ananas: () => (
+    <svg viewBox="0 0 100 100" fill="currentColor">
+      <ellipse cx="50" cy="65" rx="25" ry="30" />
+      <path d="M50 35 L40 10 L50 20 L60 10 Z" />
+    </svg>
+  ),
+  Gingembre: () => (
+    <svg viewBox="0 0 100 100" fill="currentColor">
+      <path d="M30 70 Q20 50 40 40 Q50 20 70 30 Q90 50 70 70 Q50 85 30 70 Z" />
     </svg>
   ),
   LinoPapaya: () => (
     <svg viewBox="0 0 150 250" className="w-full h-full">
-      <path d="M68 245 L82 245 L78 70 Q75 60 72 70 Z" fill="var(--solar)" opacity="0.9" />
+      <path d="M68 245 L82 245 L78 70 Q75 60 72 70 Z" fill="var(--solar)" />
       <g stroke="var(--ink)" strokeWidth="0.8" opacity="0.15">
         {[80, 95, 110, 125, 140, 155, 170, 185, 200, 215, 230].map(y => (
-          <path key={y} d={`M${73} ${y} Q75 ${y+1} ${77} ${y}`} fill="none" />
+          <path key={y} d={`M${73} ${y} Q${75} ${y+1} ${77} ${y}`} fill="none" />
         ))}
       </g>
       <g fill="var(--forest)">
         {[0, 45, 90, 135, 180, 225, 270, 315].map(deg => (
-          <path key={deg} d="M75 75 Q100 30 130 60 Q105 70 75 80 Z" transform={`rotate(${deg}, 75, 75)`} opacity="0.8" />
+          <path key={deg} d="M75 75 Q100 30 130 60 Q105 70 75 80 Z" transform={`rotate(${deg}, 75, 75)`} opacity="0.9" />
         ))}
       </g>
       <g fill="var(--bordeaux)">
-        <ellipse cx="75" cy="85" rx="8" ry="12" />
-        <ellipse cx="68" cy="98" rx="7" ry="11" transform="rotate(15, 68, 98)" />
-        <ellipse cx="82" cy="98" rx="7" ry="11" transform="rotate(-15, 82, 98)" />
-        <ellipse cx="75" cy="112" rx="9" ry="14" />
+        <circle cx="68" cy="85" r="8" />
+        <circle cx="82" cy="88" r="7" />
+        <circle cx="75" cy="95" r="9" />
       </g>
     </svg>
   ),
   LinoBaobabStylized: () => (
-    <svg viewBox="0 0 150 250" className="w-full h-full">
-      <path d="M45 240 Q60 120 65 70 L70 50 L80 50 L85 70 Q90 120 105 240 Z" fill="var(--forest)" />
-      <g fill="none" stroke="var(--forest)" strokeWidth="6" strokeLinecap="round">
-        <path d="M65 70 L40 50" />
-        <path d="M75 55 L75 30" />
-        <path d="M85 70 L110 50" />
+    <svg viewBox="0 0 200 250" className="w-full h-full">
+      {/* Trunk with artisanal streaks */}
+      <path d="M70 240 L130 240 Q135 150 120 80 L110 60 L90 60 L80 80 Q65 150 70 240 Z" fill="var(--forest)" />
+      <g stroke="var(--paper)" strokeWidth="0.8" opacity="0.15">
+        {[100, 125, 150, 175, 200, 225].map(y => (
+          <path key={y} d={`M${85} ${y} Q${100} ${y+1} ${115} ${y}`} fill="none" />
+        ))}
       </g>
-      <g fill="var(--bordeaux)">
-        <path d="M15 50 Q35 20 60 50 Q35 65 15 50 Z" />
-        <path d="M55 35 Q75 5 95 35 Q75 50 55 35 Z" />
-        <path d="M90 50 Q115 20 135 50 Q115 65 90 50 Z" />
+      {/* Wavy Branches and Leaf Clouds */}
+      <g fill="none" stroke="var(--forest)" strokeWidth="8" strokeLinecap="round">
+        <path d="M100 65 Q110 40 140 30" />
+        <path d="M100 65 Q90 40 60 30" />
+        <path d="M100 75 Q130 60 160 70" />
+        <path d="M100 75 Q70 60 40 70" />
+      </g>
+      <g fill="var(--forest-pastel)">
+        <path d="M140 30 Q160 10 180 30 Q160 50 140 30 Z" />
+        <path d="M60 30 Q40 10 20 30 Q40 50 60 30 Z" />
+        <path d="M160 70 Q180 50 200 70 Q180 90 160 70 Z" />
+        <path d="M40 70 Q20 50 0 70 Q20 90 40 70 Z" />
+        <path d="M100 25 Q110 5 120 25 Q110 45 100 25 Z" transform="translate(-10, 0)" />
       </g>
     </svg>
   ),
   LinoRavinalaStylized: () => (
-    <svg viewBox="0 0 200 250" className="w-full h-full">
-      <path d="M85 245 L115 245 L110 130 Q100 120 90 130 Z" fill="var(--solar)" />
-      <g fill="var(--bordeaux)">
-        <path d="M80 145 Q100 115 120 145 L110 165 Q100 160 90 165 Z" fill="var(--solar)" stroke="var(--ink)" strokeWidth="1" />
-        {[...Array(13)].map((_, i) => {
-          const deg = -85 + (i * 14.1);
+    <svg viewBox="0 0 250 250" className="w-full h-full">
+      <path d="M115 245 L135 245 L130 150 Q125 140 120 150 Z" fill="var(--solar)" />
+      <g stroke="var(--ink)" strokeWidth="0.8" opacity="0.1">
+        {[170, 190, 210, 230].map(y => (
+          <path key={y} d={`M122 ${y} Q125 ${y+1} ${128} ${y}`} fill="none" />
+        ))}
+      </g>
+      <g>
+        {[...Array(11)].map((_, i) => {
+          const deg = -75 + (i * 15);
           return (
             <path 
               key={i} 
-              d="M100 130 L95 15 L105 15 L105 130 Z" 
-              transform={`rotate(${deg}, 100, 130)`}
-              stroke="var(--ink)"
-              strokeWidth="1.2"
-              strokeOpacity="0.08"
+              d="M125 150 L118 20 Q125 5 132 20 L125 150 Z" 
+              transform={`rotate(${deg}, 125, 150)`}
+              fill="var(--forest)"
+              fillOpacity="0.9"
             />
           );
         })}
@@ -89,139 +110,96 @@ export const Icons = {
   ),
   LinoBananier: () => (
     <svg viewBox="0 0 150 250" className="w-full h-full">
-      <path d="M55 245 Q75 240 70 180 Q65 120 72 40 L88 42 Q85 122 90 182 Q95 240 75 245 Z" fill="var(--neon-pink)" opacity="0.9" />
-      <g fill="var(--forest)">
-        <path d="M78 40 Q80 10 100 5 Q95 30 80 45 Z" />
-        <path d="M75 40 Q75 10 55 5 Q60 30 75 45 Z" />
-        <path d="M80 50 Q130 40 145 110 Q100 120 80 55 Z" />
-        <path d="M70 50 Q20 40 5 110 Q50 120 70 55 Z" />
+      <path d="M70 245 Q80 230 75 180 L75 80" stroke="var(--neon-pink)" strokeWidth="10" fill="none" />
+      <g stroke="var(--ink)" strokeWidth="0.8" opacity="0.15">
+        {[100, 130, 160, 190, 220].map(y => (
+          <path key={y} d={`M72 ${y} L78 ${y+2}`} fill="none" />
+        ))}
       </g>
-      <g fill="var(--solar)">
-        <path d="M78 60 Q85 85 80 110" stroke="var(--solar)" strokeWidth="4" fill="none" />
-        <path d="M76 110 Q80 125 84 110 L80 135 Z" fill="var(--bordeaux)" />
+      <g fill="var(--forest)" fillOpacity="0.9">
+        <path d="M75 80 Q150 40 160 150 Q100 140 75 80" />
+        <path d="M75 80 Q0 40 -10 150 Q50 140 75 80" />
+        <path d="M75 95 Q130 110 120 200 Q80 180 75 95" />
+        <path d="M75 95 Q20 110 30 200 Q70 180 75 95" />
+      </g>
+      {/* Real bunch of bananas (regime) */}
+      <g transform="translate(75, 110)" fill="var(--solar)">
+        <path d="M-10 0 Q-5 15 5 12 Q-5 12 -10 0 Z" transform="rotate(-20)" />
+        <path d="M-10 0 Q-5 15 5 12 Q-5 12 -10 0 Z" transform="rotate(0)" />
+        <path d="M-10 0 Q-5 15 5 12 Q-5 12 -10 0 Z" transform="rotate(20)" />
+        <path d="M-8 8 Q-3 23 7 20 Q-3 20 -8 8 Z" transform="rotate(-10)" />
+        <path d="M-8 8 Q-3 23 7 20 Q-3 20 -8 8 Z" transform="rotate(10)" />
       </g>
     </svg>
   ),
-  LinoFlowerPink: () => (
-    <svg viewBox="0 0 80 80" className="w-full h-full">
-      <g fill="var(--neon-pink)">
-         <circle cx="40" cy="40" r="12" />
-         {[0, 60, 120, 180, 240, 300].map(deg => (
-           <circle key={deg} cx="40" cy="18" r="10" transform={`rotate(${deg}, 40, 40)`} opacity="0.8" />
-         ))}
-      </g>
+  Puzzle: () => (
+    <svg viewBox="0 0 100 100" fill="currentColor">
+      <path d="M30 20 H45 Q50 10 55 20 H70 V35 Q80 40 70 45 V60 H55 Q50 70 45 60 H30 V45 Q20 40 30 35 V20 Z" />
+    </svg>
+  ),
+  Community: () => (
+    <svg viewBox="0 0 100 100" fill="currentColor">
+      <circle cx="50" cy="30" r="15" />
+      <path d="M20 85 Q20 60 50 60 Q80 60 80 85 Z" />
+      <circle cx="20" cy="45" r="10" />
+      <path d="M5 90 Q5 75 20 75 Q35 75 35 90 Z" />
+      <circle cx="80" cy="45" r="10" />
+      <path d="M65 90 Q65 75 80 75 Q95 75 95 90 Z" />
+    </svg>
+  ),
+  Sprout: () => (
+    <svg viewBox="0 0 100 100" fill="currentColor">
+      <path d="M50 90 V40" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
+      <path d="M50 40 C70 10 100 40 50 45 C0 40 30 10 50 40" />
+    </svg>
+  ),
+  Seed: () => (
+    <svg viewBox="0 0 100 100" fill="currentColor">
+      <path d="M50 85 Q20 85 20 50 Q20 15 50 15 Q80 15 80 50 Q80 85 50 85 Z" />
+      <path d="M50 25 L50 40 M55 30 L65 35" stroke="var(--paper)" strokeWidth="4" strokeLinecap="round" opacity="0.5" />
     </svg>
   ),
   FlagFR: () => (
-    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M4 8 H14 V32 H4 Z" fill="#002395" />
-      <path d="M14 8 H26 V32 H14 Z" fill="currentColor" />
-      <path d="M26 8 H36 V32 H26 Z" fill="#ED2939" />
-      <rect x="3" y="7" width="34" height="26" stroke="var(--ink)" strokeWidth="1" />
+    <svg viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg">
+      <rect width="13.3" height="30" fill="#002395" />
+      <rect x="13.3" width="13.4" height="30" fill="#FFFFFF" />
+      <rect x="26.7" width="13.3" height="30" fill="#ED2939" />
     </svg>
   ),
   FlagEN: () => (
-    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="4" y="8" width="32" height="24" fill="#00247D" />
-      <path d="M18 8 H22 V32 H18 Z M4 18 H36 V22 H4 Z" fill="#FFFFFF" />
-      <path d="M19 8 H21 V32 H19 Z M4 19 H36 V21 H4 Z" fill="#CF142B" />
-      <rect x="3" y="7" width="34" height="26" stroke="var(--ink)" strokeWidth="1" />
+    <svg viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg">
+      <rect width="40" height="30" fill="#012169" />
+      <path d="M0,0 L40,30 M40,0 L0,30" stroke="#FFFFFF" strokeWidth="4" />
+      <path d="M0,0 L40,30 M40,0 L0,30" stroke="#C8102E" strokeWidth="2" />
+      <path d="M20,0 L20,30 M0,15 L40,15" stroke="#FFFFFF" strokeWidth="6" />
+      <path d="M20,0 L20,30 M0,15 L40,15" stroke="#C8102E" strokeWidth="4" />
     </svg>
   ),
   FlagMG: () => (
-    <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <rect x="4" y="8" width="12" height="24" fill="currentColor" />
-      <rect x="16" y="8" width="20" height="12" fill="#ED1C24" />
-      <rect x="16" y="20" width="20" height="12" fill="#007E3A" />
-      <rect x="3" y="7" width="34" height="26" stroke="var(--ink)" strokeWidth="1" />
-    </svg>
-  ),
-  Bamboo: () => (
-    <svg viewBox="0 0 100 150" className="w-full h-full" fill="currentColor">
-      <rect x="45" y="10" width="10" height="30" rx="2" />
-      <rect x="45" y="45" width="10" height="35" rx="2" />
-      <rect x="45" y="85" width="10" height="40" rx="2" />
-      <path d="M55 25 Q75 15 85 30 M45 60 Q25 50 15 65 M55 95 Q80 85 90 100" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" />
-    </svg>
-  ),
-  Bird: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <path d="M20 60 Q20 30 50 30 Q80 30 80 60 Q80 85 50 85 Q20 85 20 60 Z" />
-      <path d="M80 60 L95 55 L90 65 Z" />
-      <circle cx="40" cy="50" r="4" fill="white"/>
-    </svg>
-  ),
-  Leaf: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <path d="M50 90 Q10 60 10 30 Q10 10 50 10 Q90 10 90 30 Q90 60 50 90 Z" />
-      <path d="M50 90 L50 10" stroke="white" strokeWidth="2" opacity="0.4" />
-    </svg>
-  ),
-  Ravinala: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <path d="M48 95 L52 95 L52 45 L48 45 Z" />
-      <path d="M50 45 L90 15 M50 45 L10 15 M50 45 L80 25 M50 45 L20 25" stroke="currentColor" strokeWidth="8" fill="none" strokeLinecap="round" />
-    </svg>
-  ),
-  Zebu: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <path d="M20 60 Q20 30 40 30 Q50 15 60 30 Q80 30 80 60 Q80 85 50 85 Q20 85 20 60" />
-      <path d="M45 15 L35 5 M55 15 L65 5" stroke="currentColor" strokeWidth="6" strokeLinecap="round" />
-      <circle cx="50" cy="50" r="10" opacity="0.2" fill="white"/>
-    </svg>
-  ),
-  Vanilla: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <path d="M30 10 L70 90 M70 10 L30 90" stroke="currentColor" strokeWidth="8" strokeLinecap="round" />
-      <circle cx="50" cy="50" r="15" />
-    </svg>
-  ),
-  Coffee: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <ellipse cx="50" cy="50" rx="30" ry="45" />
-      <path d="M50 5 C 20 40, 80 60, 50 95" stroke="white" strokeWidth="4" fill="none" />
-    </svg>
-  ),
-  Hut: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <path d="M10 90 L90 90 L90 50 L50 10 L10 50 Z" />
-      <rect x="40" y="60" width="20" height="30" fill="white" />
-    </svg>
-  ),
-  Fish: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <path d="M10 50 Q30 20 70 30 L90 10 L90 90 L70 70 Q30 80 10 50" />
-      <circle cx="30" cy="45" r="3" fill="white" />
-    </svg>
-  ),
-  Tools: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <rect x="45" y="10" width="10" height="60" />
-      <path d="M20 70 L80 70 L70 90 L30 90 Z" />
-    </svg>
-  ),
-  Moon: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <path d="M50 10 A 40 40 0 1 0 90 50 A 30 30 0 1 1 50 10" />
-    </svg>
-  ),
-  Sun: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <circle cx="50" cy="50" r="20" />
-      {[0, 45, 90, 135, 180, 225, 270, 315].map(deg => (
-        <rect key={deg} x="47" y="5" width="6" height="15" transform={`rotate(${deg}, 50, 50)`} rx="3" />
-      ))}
+    <svg viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg">
+      <rect width="13.3" height="30" fill="#FFFFFF" />
+      <rect x="13.3" width="26.7" height="15" fill="#EF3340" />
+      <rect x="13.3" y="15" width="26.7" height="15" fill="#009739" />
     </svg>
   ),
   MapMadagascar: () => (
-    <svg viewBox="0 0 100 150" className="w-full h-full" fill="currentColor">
-      <path d="M40 10 L55 20 L65 50 L60 80 L50 110 L40 130 L30 110 L25 80 L30 50 L35 20 Z" />
+    <svg viewBox="0 0 100 150" fill="currentColor">
+       <path d="M47.7,4.4c3.4,4.6,7.4,12.5,9,16.8c1.6,4.3,3,9.5,4,13.8c1,4.3,1.6,11.5,1.2,16.8c-0.4,5.3-2.6,12.7-5.1,17.4 c-2.5,4.7-6,8.6-8.3,13.6c-2.3,5-3.3,12.3-3.6,18.7c-0.3,6.4,0,14,2.5,19.2c2.5,5.2,7.2,10.2,7.4,13.4c0.2,3.2-4.1,4.6-9.1,4.9 c-5,0.3-10.7-1-15.1-4c-4.4-3-7.5-7.7-9.4-14c-1.9-6.3-2.4-14.3-1-20.9c1.4-6.6,5.1-13.8,7.3-19.8c2.2-6,2.9-10.6,2.2-16.1 c-0.7-5.5-2.8-12.2-2.9-19c-0.1-6.8,1.6-13.8,4.1-19.5c2.5-5.7,5.6-11,8.1-15c2.5-4,4.5-6.7,6.8-9C41,0.7,44.3-0.2,47.7,4.4z" />
     </svg>
   ),
   MapFrance: () => (
-    <svg viewBox="0 0 100 100" className="w-full h-full" fill="currentColor">
-      <path d="M50 5 L85 25 L85 75 L50 95 L15 75 L15 25 Z" />
+    <svg viewBox="0 0 100 100" fill="currentColor">
+      <path d="M50,4.3l15,4.7l17,14.7l4,19.7l-9,26.7l-22.3,19.7l-30.7-10l-16.7-29.3l-2.7-23.7l15.3-15l16-7.3L50,4.3z" />
     </svg>
+  ),
+  Facebook: () => (
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+  ),
+  Instagram: () => (
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 1.366.062 2.633.332 3.608 1.308.975.975 1.245 2.242 1.308 3.607.058 1.266.07 1.646.07 4.85s-.012 3.584-.07 4.85c-.063 1.366-.333 2.633-1.308 3.608-.975.975-2.242 1.245-3.607 1.308-1.266.058-1.646.07-4.85.07s-3.584-.012-4.85-.07c-1.366-.063-2.633-.333-3.608-1.308-.975-.975-1.245-2.242-1.308-3.607-.058-1.266-.07-1.646-.07-4.85s.012-3.584.07-4.85c.062-1.366.332-2.633 1.308-3.608.975-.975 2.242-1.245 3.607-1.308 1.266-.058-1.646-.07 4.85-.07zm0-2.163c-3.259 0-3.667.014-4.947.072-1.366.062-2.633.332-3.608 1.308-.975.975-1.245 2.242-1.308 3.607-.058 1.266-.072 1.646-.072 4.85s.014 3.584.072 4.85c.062 1.366.332-2.633 1.308 3.608.975.975 2.242 1.245 3.607 1.308 1.266.058 1.646.072 4.85.072s3.584-.014 4.85-.072c1.366-.062 2.633-.332 3.608-1.308.975-.975 1.245-2.242 1.308-3.607.058-1.266.072-1.646.072-4.85s-.014-3.584-.072-4.85c-.062-1.366-.332-2.633-1.308-3.608-.975-.975-2.242-1.245-3.607-1.308-1.266-.058-1.646-.072-4.85-.072zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.791-4-4s1.791-4 4-4 4 1.791 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+  ),
+  Linkedin: () => (
+    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
   )
 };
 
@@ -240,59 +218,97 @@ export const Dividers = {
   ),
   StampTrail: ({ className = "" }: { className?: string }) => (
     <div className={`flex justify-around items-center w-full py-20 pointer-events-none opacity-10 ${className}`}>
-       {[Icons.Leaf, Icons.Vanilla, Icons.Bird, Icons.Coffee, Icons.Fish].map((Icon, i) => (
+       {[Icons.Vanilla, Icons.Coffee, Icons.Manioc, Icons.Ananas, Icons.Gingembre].map((Icon, i) => (
          <div key={i} className="w-16 h-16 transform rotate-[15deg]">
            <Icon />
          </div>
        ))}
+    </div>
+  ),
+  Forest: ({ className = "" }: { className?: string }) => (
+    <div className={`absolute inset-0 z-0 pointer-events-none opacity-5 ${className}`}>
+      <svg width="100%" height="100%" viewBox="0 0 1000 400" preserveAspectRatio="none">
+        {/* Layered hand-drawn forest silhouette */}
+        {[...Array(12)].map((_, i) => (
+          <path 
+            key={i} 
+            d={`M${i * 100 - 50} 400 Q${i * 100 + 50} 50 ${i * 100 + 150} 400 Z`} 
+            fill="currentColor" 
+            opacity={0.3}
+          />
+        ))}
+        {[...Array(8)].map((_, i) => (
+          <path 
+            key={i} 
+            d={`M${i * 150} 400 Q${i * 150 + 75} 150 ${i * 150 + 150} 400 Z`} 
+            fill="currentColor" 
+            opacity={0.5}
+          />
+        ))}
+      </svg>
+    </div>
+  ),
+  Fields: ({ className = "" }: { className?: string }) => (
+    <div className={`absolute inset-0 z-0 pointer-events-none opacity-10 ${className}`}>
+      <svg width="100%" height="100%" viewBox="0 0 1000 1000" preserveAspectRatio="none">
+        {[...Array(40)].map((_, i) => (
+          <path 
+            key={i} 
+            d={`M0 ${i * 25} Q500 ${i * 25 + 10} 1000 ${i * 25}`} 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="1" 
+          />
+        ))}
+      </svg>
     </div>
   )
 };
 
 export const PILLARS: Pillar[] = [
   {
-    title: "Agro-écologie",
-    description: "Soutenir l'autonomie des agriculteurs par des méthodes respectueuses du sol malgache.",
-    icon: <Icons.Ravinala />,
+    title: "Agroécologie",
+    description: "Soutenir l'autonomie des agriculteur.rice.s par des méthodes respectueuses du sol et de la biodiversité malgaches.",
+    icon: <Icons.LinoBananier />,
   },
   {
-    title: "Transmission",
-    description: "Eduquer les plus jeunes aux enjeux de la forêt via des outils ludiques.",
-    icon: <Icons.Bamboo />,
+    title: "Pédagogie",
+    description: "Sensibiliser la diaspora et le grand public aux enjeux du changement climatique et de l'agroécologie à Madagascar à travers des formats ludiques.",
+    icon: <Icons.Puzzle />,
   },
   {
-    title: "Culture Viva",
-    description: "Célébrer le patrimoine et l'artisanat malgache à travers des événements solidaires.",
-    icon: <Icons.Zebu />,
+    title: "Communauté",
+    description: "Célébrer le patrimoine malgache à travers des événements de fête, de partage et de coopération solidaires.",
+    icon: <Icons.Community />,
   },
 ];
 
 export const NEWS: NewsItem[] = [
   {
     id: '1',
-    title: "Le Taombaovao à Paris",
+    title: "Festival Taombaovao",
     date: "Mars 2024",
     location: 'France',
     excerpt: "Célébration du Nouvel An Malgache : musique, gastronomie et partage.",
-    content: "Le Taombaovao, ou Nouvel An Malgache, est bien plus qu'une simple fête : c'est un moment sacré de réconciliation et de partage. Cette année, Tetikasa ALA a orchestré une rencontre inoubliable au cœur de Paris. Entre les stands d'artisanat en raphia et les effluves de romazava, la diaspora et les curieux se sont retrouvés pour graver une nouvelle page de notre histoire commune. L'événement a permis de récolter des fonds cruciaux pour nos projets de reforestation en Analamanga, prouvant une fois de plus que la culture est le terreau de la solidarité.",
-    iconKey: 'Bird'
+    content: "Le Taombaovao, ou Nouvel An Malgache, est bien plus qu'une simple fête : c'est un moment sacré de réconciliation et de partage. Cette année, Tetikasa ALA a orchestré une rencontre inoubliable au cœur de Paris.",
+    iconKey: 'Community'
   },
   {
     id: '2',
-    title: "Restauration Forestière",
+    title: "Projet Lovain-Jafy",
     date: "Janvier 2024",
     location: 'Madagascar',
-    excerpt: "Lancement de nouveaux corridors forestiers pour protéger la biodiversité endémique.",
-    content: "Face à l'urgence climatique, nos équipes sur le terrain à Madagascar n'ont pas chômé. En ce début d'année, nous avons lancé officiellement le projet 'Corridors de Vie'. L'objectif est de relier les fragments de forêt primaire par des zones de reboisement gérées par les communautés locales. Plus de 5000 jeunes plants de variétés endémiques ont déjà été mis en terre dans nos pépinières de brousse. Ce projet ne se contente pas de planter des arbres : il forme les villageois à une agriculture durable qui respecte et enrichit le sol malgache.",
-    iconKey: 'Leaf'
+    excerpt: "Accompagnement de 110 familles d'Ambohimanga vers l'agroécologie.",
+    content: "Lovain-Jafy est le projet pilote de notre association Ala. Le cœur de cette entreprise est d'accompagner 110 familles de la commune d'Ambohimanga pour les introduire à l'agroécologie.",
+    iconKey: 'Sprout'
   },
   {
     id: '3',
-    title: "Escape Game ALA",
+    title: "Rallye des Mille Graines",
     date: "Décembre 2023",
     location: 'France',
-    excerpt: "Succès de nos ateliers pédagogiques sur la biodiversité en milieu scolaire.",
-    content: "L'éducation est la clé d'un avenir vert. Notre Escape Game itinérant 'Le Secret de l'Arbre' a parcouru plusieurs établissements scolaires en France avec un succès retentissant. En transformant la sensibilisation en aventure sensorielle, nous avons captivé l'imaginaire de plus de 800 élèves. Les enfants doivent résoudre des énigmes basées sur les sons de la forêt et les textures des graines malgaches pour sauver leur totem. Une manière ludique et puissante de transmettre les valeurs de protection de la nature dès le plus âge.",
-    iconKey: 'Bamboo'
+    excerpt: "Un jeu de piste pédagogique pour 155 élèves sur l'agriculture.",
+    content: "Ala a eu le plaisir de concevoir entièrement le 'Rallye des Mille Graines', un jeu de piste franco-malgache sur le thème de l'alimentation et de l'agriculture à Madagascar.",
+    iconKey: 'Puzzle'
   }
 ];

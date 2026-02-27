@@ -18,15 +18,12 @@ const DonationPopup: React.FC = () => {
     <div className={`fixed bottom-10 left-10 z-[60] transition-all duration-1000 transform ${visible ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}>
       <div className="relative bg-white border-[3px] border-[var(--ink)] p-8 shadow-[15px_15px_0px_var(--solar)] max-w-[320px] lino-block overflow-hidden group">
         
-        {/* Decorative Stamps in Bordeaux */}
-        <div className="absolute top-2 left-2 w-6 h-6 text-[var(--bordeaux)] rotate-[-45deg] opacity-20"><Icons.Bird /></div>
-        <div className="absolute bottom-2 right-2 w-8 h-8 text-[var(--bordeaux)] rotate-[15deg] opacity-[0.05]"><Icons.Leaf /></div>
+        <div className="absolute top-2 left-2 w-6 h-6 text-[var(--bordeaux)] rotate-[-45deg] opacity-20"><Icons.Sprout /></div>
         
         <div className="relative h-44 flex items-center justify-center mb-6">
           <div className="w-32 h-32 text-[var(--forest)] transform transition-transform group-hover:scale-110 duration-700">
             <Icons.LinoBaobabStylized />
           </div>
-          <div className="absolute bottom-6 w-20 h-1.5 bg-[var(--ink)] opacity-5 rounded-full blur-sm"></div>
         </div>
 
         <div className="text-center relative z-10">
@@ -34,10 +31,9 @@ const DonationPopup: React.FC = () => {
             L'Arbre à <span className="text-[var(--forest)]">Don</span>
           </h5>
           <p className="font-stamped text-sm leading-relaxed mb-8 opacity-80 font-bold italic">
-            "Plantez votre empreinte." <br/>
-            Un geste aujourd'hui, une forêt demain.
+            Par ici pour nous donner un coup de pousse !
           </p>
-          <button className="w-full py-5 bg-[var(--forest)] text-white font-display text-2xl uppercase tracking-[0.2em] hover:bg-[var(--bordeaux)] transition-all border-2 border-[var(--ink)] shadow-[6px_6px_0px_var(--ink)] group-hover:shadow-none group-hover:translate-x-1 group-hover:translate-y-1">
+          <button className="w-full py-5 bg-[var(--forest)] text-white font-display text-2xl uppercase tracking-[0.2em] hover:bg-[var(--bordeaux)] transition-all border-2 border-[var(--ink)] shadow-[6px_6px_0px_var(--ink)]">
             Contribuer
           </button>
         </div>
